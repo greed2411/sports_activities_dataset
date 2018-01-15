@@ -3,7 +3,7 @@ Daily sports activity dataset from UCI ML repository.
 
 Dataset can be found [here](https://archive.ics.uci.edu/ml/datasets/Daily+and+Sports+Activities)
 
-## Report: 
+# Report: 
 
 (also part of csir_cdri_test.ipynb)
 
@@ -12,6 +12,8 @@ It has been done according to the **research** paper,
 K. Altun, B. Barshan, and O. Tunçel,
 `Comparative study on classifying human activities with miniature inertial and magnetic sensors`,
 Pattern Recognition, 43(10):3605-3620, October 2010.
+
+# Preprocessing
 
 Where they take the input segment, that's a 5 second window of a patient performing an activity, which has 125 observations ( 5 x 25Hz ) with 45 features, because of 9 axes of each sensor unit on torso, left hand, right hand, left leg, right leg. They convert the 125x45 into a handcrafted meaningful 1170x1 matrix.
 
