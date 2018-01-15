@@ -3,6 +3,8 @@ Daily sports activity dataset from UCI ML repository.
 
 Dataset can be found [here](https://archive.ics.uci.edu/ml/datasets/Daily+and+Sports+Activities)
 
+The **important** ipynb is [csir_cdri_test.ipynb](https://github.com/greed2411/sports_activities_dataset/blob/master/csir_cdri_test.ipynb), secondary file is [prediction-pca.ipynb](https://github.com/greed2411/sports_activities_dataset/blob/master/prediction-pca.ipynb).
+
 # Report: 
 
 (also part of csir_cdri_test.ipynb)
