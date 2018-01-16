@@ -5,6 +5,8 @@ Dataset can be found [here](https://archive.ics.uci.edu/ml/datasets/Daily+and+Sp
 
 The **important** ipynb is [csir_cdri_test.ipynb](https://github.com/greed2411/sports_activities_dataset/blob/master/csir_cdri_test.ipynb), secondary file is [prediction-pca.ipynb](https://github.com/greed2411/sports_activities_dataset/blob/master/prediction-pca.ipynb).
 
+**POST SUBMISSION edit** : Pytorch results are in [pytorch-model.ipynb](https://github.com/greed2411/sports_activities_dataset/blob/master/pytorch%20model.ipynb). So look into it as well.
+
 # Report: 
 
 (also part of csir_cdri_test.ipynb)
@@ -38,7 +40,7 @@ The test I performed includes two parts, one with 9120 x 1170 matrix, and anothe
 
 ## Actual Dataset, 9120 x 1172
 
-### Predicting Activity with signals.
+### Predicting Activity with signals, on actual dataset.
 
 
 |**Model**                    |**Accuracy**|
@@ -51,7 +53,7 @@ The test I performed includes two parts, one with 9120 x 1170 matrix, and anothe
 
 *Runner up*: Neural Networks (DNN) : 0.85
 
-### Predicting Patient with signals and activity, The bonus task.
+### Predicting Patient with signals and activity, The bonus task, on actual dataset
 
 
 |**Model**                    |**Accuracy**|
@@ -62,11 +64,10 @@ The test I performed includes two parts, one with 9120 x 1170 matrix, and anothe
 |Decision Tree|0.7394|
 |kNN (k=3) |0.6578|
 
-### Also Predicting Patient with signals alone, also has been performed, and the results can be seen by scrolling up, they are almost on par with the above results.
 
-## PCA reduced Dataset, 9120 x 32, available as a .csv file in the repo.
+## PCA Dataset, 9120 x 32, available as a .csv file in the repo.
 
-### Predicting Activity with signals.
+### Predicting Activity with signals, on PCA dataset
 
 
 |**Model**                    |**Accuracy**|
@@ -78,7 +79,17 @@ The test I performed includes two parts, one with 9120 x 1170 matrix, and anothe
 
 *Runner up*: Bagging Classifier : 0.8320, Neural Networks (DNN) : 0.8192
 
-#### With Neural Networks
+#### With Neural Networks (PyTorch) on PCA dataset
+
+|**Model**                    |**Accuracy**|
+|-----------------------------|------------|
+|With Adam Optimizer  |0.8951|
+|With Adam Optimizer, Karpathy constant | 0.8078 |
+|With RMSProp optimizer  |0.8877|
+|With SGD Optimizer | 0.8451 |
+
+
+#### With Neural Networks (scikit-learn) on PCA dataset
 
 
 |**Model**                    |**Accuracy**|
@@ -86,8 +97,21 @@ The test I performed includes two parts, one with 9120 x 1170 matrix, and anothe
 |MLP with Adam + ReLU |0.8065|
 |MLP with Adam + Sigmoid | 0.7771 |
 
+
 MLP with SGD are worse than I expected, they converged within 1000 epochs, with accuracy < 40%, whereas Adam optmizers made it possible with less than 500 epochs and accuracy > 75%.
 
-### Predicting Patient with activity also has been done, but the results are far from comparable to the results from the actual dataset.
+
+### Bonus task with PyTorch on PCA dataset.
+
+
+|**Model**                    |**Accuracy**|
+|-----------------------------|------------|
+|With RMSProp optimizer  |0.5043|
+
+For NNs, `Pytorch` examples are considered far well from `scikit-Learn` whereas, hyperparameter tuning is the most important, I did my best to produce the above results.
+
 
 ***END***
+
+
+EDIT Jan 16 2018 15:38 hrs: Postsubmission edits are about Pytorch results.
